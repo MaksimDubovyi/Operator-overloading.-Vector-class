@@ -1,0 +1,34 @@
+## Operator-overloading.-Vector-class
+ - Vector(const Vector& v); // Конструктор копирования
+ - Vector(Vector && v); // Конструктор переноса
+ - ~Vector(); // Деструктор
+ - Vector& operator ++ (); // Увеличение всех компонент вектора на
+ - // единицу (префикс)
+ - Vector operator ++ (int k); // Увеличение всех компонент вектора на
+ - // единицу (постфикс)
+ - Vector& operator -- (); // Уменьшение всех компонент вектора на
+ - // единицу (префикс)
+ - Vector operator -- (int k); // Уменьшение всех компонент вектора на
+ - // единицу (постфикс)
+ - Vector& operator = (const Vector& v); // Перегруженный оператор
+ - // присваивания с копированием
+ - Vector& operator = (Vector && v); // Перегруженный оператор
+ - // присваивания с переносом
+ - int& operator [] (int index); // Перегруженный оператор индексации
+ - Vector operator + (const Vector& v); // Сложение двух векторов
+ - Vector operator + (int n); // Сложение вектора с числом (каждый
+ - // компонент вектора складывается с числом)
+ - Vector& operator += (const Vector& v); // Перегруженный оператор += 
+ - // для сложения двух векторов
+ - Vector operator - (const Vector& v); // Вычитание двух векторов
+ - Vector operator - (int n); // Вычитание числа из вектора
+ - Vector& operator -= (const Vector& v); // Перегруженный оператор -= 
+ - // для вычитания двух векторов
+ - Vector operator * (const Vector& v); // Умножение векторов
+ - Vector operator * (int n); // Умножение вектора на число
+ - Vector& operator *= (int n); // Перегруженный оператор *= для
+ - // умножения вектора на число
+ - friend istream& operator >> (istream& cin, Vector& v); 
+ - // Ввод вектора с клавиатуры
+ - friend ostream& operator << (ostream& cout, Vector& v); 
+ - // Вывод вектора на экран
